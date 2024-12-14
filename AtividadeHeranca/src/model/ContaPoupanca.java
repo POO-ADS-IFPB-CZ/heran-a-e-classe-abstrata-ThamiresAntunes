@@ -10,6 +10,7 @@ public class ContaPoupanca extends Conta{
         double saldoAtual = this.getSaldo();
         double reajuste = saldoAtual * percentual;
         this.depositar(reajuste);
+        System.out.println("Reajuste realizado com sucesso!");
     }
 
 
