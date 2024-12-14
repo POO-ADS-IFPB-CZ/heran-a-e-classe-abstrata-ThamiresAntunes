@@ -37,12 +37,13 @@ public class Conta {
 
     public void depositar(double valor){
         saldo = saldo + valor;
-        System.out.println("Depósitp realizado com sucesso!");
+        System.out.println("Depósito realizado com sucesso!");
     }
 
     public boolean sacar(double valor){
         if(valor <= saldo){
             saldo = saldo - valor;
+            System.out.println("Saque de R$" + valor + " realizado!");
             return true;
         }
         return false;
@@ -50,6 +51,14 @@ public class Conta {
 
     public void imprimirTipoConta(){
         System.out.println("Conta Comum.");
+    }
+
+    public String mostrarConta() {
+        return "Conta{" +
+                "Número=" + numero +
+                ", Nome='" + nome + '\'' +
+                ", Saldo=" + saldo +
+                '}';
     }
 
 }
