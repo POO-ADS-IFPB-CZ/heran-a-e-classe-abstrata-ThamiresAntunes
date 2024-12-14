@@ -29,4 +29,14 @@ public class ContaEspecial extends Conta{
     public void imprimirTipoConta(){
         System.out.println("Conta Especial.");
     }
+
+    @Override
+    public String mostrarConta(){
+        return "Conta{" +
+                "Número=" + getNumero() +
+                ", Nome='" + getNome() + '\'' +
+                ", Saldo=" + getSaldo() +
+                ", Limite=" + limite +
+                '}';
+    }
 }
